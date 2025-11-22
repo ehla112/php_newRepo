@@ -27,6 +27,6 @@
                 return $pdo;
         }
         
-        ## https://php-limpio-fpeccygaf2czhjbg.canadacentral-01.azurewebsites.net/
+       
 	}
 ?>
