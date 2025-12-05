@@ -3,13 +3,24 @@
     session_start();
     // session_destroy();
     require_once "models/DataBase.php";
+    $allowedControllers = [
+        'Landing',
+        'User',
+        'Company',
+        'Admin'
+    ];
+    
     $controller = isset($_REQUEST['c']) ? $_REQUEST['c'] : "Landing";
+    if(!in_array($controller, $allowedControllers)) {
+    $controller = 'Landing';
+}
     $route_controller = "controllers/" . $controller . ".php";
     if (file_exists($route_controller)) {
         $view = $controller;
         require_once $route_controller;
         $controller = new $controller;
         $action = isset($_REQUEST['a']) ? $_REQUEST['a'] : 'main';
+        
         if ($view === 'Landing' || $view === 'Login') {
             require_once "views/company/header.view.php";
             call_user_func(array($controller, $action));
