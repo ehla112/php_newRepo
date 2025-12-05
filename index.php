@@ -12,6 +12,8 @@
         'Company',
         'Admin'
     ];
+
+    // se puede tener acceso al controlador  desde la URL
     $controllerName = isset($_REQUEST['c']) ? $_REQUEST['c'] : "Landing";
     if(!in_array($controllerName,$allowedControllers)){
         $controllerName = 'Landing';
