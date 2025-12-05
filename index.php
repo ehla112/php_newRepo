@@ -2,37 +2,30 @@
     ob_start();
     session_start();
     // session_destroy();
-     session_start();
     require_once "models/DataBase.php";
-   
-    //Controladores permitidos
-    $allowedControllers =[
-        'Landing',
-        'User',
-        'Company',
-        'Admin'
-    ];
-
-    // se puede tener acceso al controlador  desde la URL
-    $controllerName = isset($_REQUEST['c']) ? $_REQUEST['c'] : "Landing";
-    if(!in_array($controllerName,$allowedControllers)){
-        $controllerName = 'Landing';
+    $controller = isset($_REQUEST['c']) ? $_REQUEST['c'] : "Landing";
+    $route_controller = "controllers/" . $controller . ".php";
+    if (file_exists($route_controller)) {
+        $view = $controller;
+        require_once $route_controller;
+        $controller = new $controller;
+        $action = isset($_REQUEST['a']) ? $_REQUEST['a'] : 'main';
+        if ($view === 'Landing' || $view === 'Login') {
+            require_once "views/company/header.view.php";
+            call_user_func(array($controller, $action));
+            require_once "views/company/footer.view.php";
+        } elseif (!empty($_SESSION['session'])) {
+            require_once "models/User.php";
+            $profile = unserialize($_SESSION['profile']);
+            $session = $_SESSION['session'];
+            require_once "views/roles/".$session."/header.view.php";
+            call_user_func(array($controller, $action));
+            require_once "views/roles/".$session."/footer.view.php";
+        } else {
+            header("Location:?");
+        }
+    } else {
+        header("Location:?");
     }
-    $controllersMap = [
-    'Landing' => 'controllers/Landing.php',
-    'User'    => 'controllers/User.php',
-    'Company' => 'controllers/Company.php',
-    'Admin'   => 'controllers/Admin.php'
-    
-    ];
-    
-    require_once $controllersMap[$controllerName];
-
-    $controller = new $controllerName;
-
-    if (!method_exists($controller, $action)) {
-    $action = 'main';
-    }
-    call_user_func([$controller, $action]); 
-    
+    ob_end_flush();
 ?>
