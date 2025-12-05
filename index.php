@@ -8,7 +8,9 @@
         'Login',
         'User',
         'Company',
-        'Admin'
+        'Admin',
+        'Dashboard',
+        'Logout'
     ];
     
     $controller = isset($_REQUEST['c']) ? $_REQUEST['c'] : "Landing";
