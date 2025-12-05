@@ -5,6 +5,7 @@
     require_once "models/DataBase.php";
     $allowedControllers = [
         'Landing',
+        'Login',
         'User',
         'Company',
         'Admin'
@@ -20,7 +21,7 @@
         require_once $route_controller;
         $controller = new $controller;
         $action = isset($_REQUEST['a']) ? $_REQUEST['a'] : 'main';
-        
+
         if ($view === 'Landing' || $view === 'Login') {
             require_once "views/company/header.view.php";
             call_user_func(array($controller, $action));
