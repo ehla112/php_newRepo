@@ -6,12 +6,11 @@
     $allowedControllers = [
         'Landing',
         'Login',
-        'User',
+        'Users',
         'Company',
         'Admin',
         'Dashboard',
         'Logout',
-        'Roles'
     ];
     
     $controller = isset($_REQUEST['c']) ? $_REQUEST['c'] : "Landing";
