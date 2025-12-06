@@ -382,14 +382,7 @@ yx-axis
 		*/
 	}
 
-	.mCSB_scrollTools .mCSB_buttonDown{
-		background-position: 0 -20px;
-		/* 
-		sprites locations
-		light: 0 -20px, -16px -20px, -32px -20px, -48px -20px, 0 -92px, -16px -92px, -32px -92px
-		dark: -80px -20px, -96px -20px, -112px -20px, -128px -20px, -80px -92px, -96px -92px, -112 -92px
-		*/
-	}
+
 
 	.mCSB_scrollTools .mCSB_buttonLeft{
 		background-position: 0 -40px;
