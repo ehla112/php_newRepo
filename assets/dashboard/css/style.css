@@ -477,10 +477,6 @@ table form{
 
 
 /*  Bootstrap breakpoints */
-@media (min-width: 576px){
-	body{}
-
-}
 
 @media (min-width: 768px){
 	.nav-lateral.active{
@@ -489,16 +485,6 @@ table form{
 	.page-content.active{
 		padding-left: 0;
 	}
-}
-
-@media (min-width: 992px){
-	body{}
-
-}
-
-@media (min-width: 1200px){
-	body{}
-
 }
 
 /*----------  Keyframes  ----------*/
