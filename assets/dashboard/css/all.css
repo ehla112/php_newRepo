@@ -4389,5 +4389,5 @@ readers do not read off random characters that represent icons */
 
 .fa,
 .fas {
-  font-family: 'Font Awesome 5 Free';
+  font-family: 'Font Awesome 5 Free',sans-serif;
   font-weight: 900; }
