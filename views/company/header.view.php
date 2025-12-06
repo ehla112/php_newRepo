@@ -35,7 +35,7 @@ https://templatemo.com/tm-559-zay-shop
 
 <body>
     <!-- Start Top Nav -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top" aria-label="Barra de navegación superior">
         <div class="container text-light">
             <div class="w-100 d-flex justify-content-between">
                 <div>
@@ -56,7 +56,7 @@ https://templatemo.com/tm-559-zay-shop
     <!-- Close Top Nav -->
 
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light shadow">
+    <nav class="navbar navbar-expand-lg navbar-light shadow" aria-label="Navegación principal">
         <div class="container d-flex justify-content-between align-items-center">
 
             <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
@@ -115,7 +115,8 @@ https://templatemo.com/tm-559-zay-shop
     <!-- Close Header -->
 
     <!-- Modal -->
-    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" 
+        aria-label="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="w-100 pt-1 mb-5 text-right">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
