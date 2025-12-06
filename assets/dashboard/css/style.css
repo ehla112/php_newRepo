@@ -29,7 +29,7 @@
 	--color-one: #F5F5F5;
 	--color-two: #24292E;
 	--color-three: #EC5252;
-	/*--color-three: #0366D6;*/
+	
 
 	--form-color: #14111A;
 
@@ -39,7 +39,7 @@
 }
 
 body,html{
-	font-family: 'roboto_condensed_light';
+	font-family: 'roboto_condensed_light',sans-serif;
 	width: 100vw;
 	height: 100vh;
 	background-color: var(--color-one);
@@ -394,7 +394,7 @@ table form{
 	text-transform: uppercase;
 	border-bottom: 1px solid var(--border-color);
 	transition: all .2s ease-in-out;
-	font-family: 'roboto_medium_regular';
+	font-family: 'roboto_medium_regular',sans-serif;
 }
 .tile:hover .tile-tittle{
 	color: #FFF;
@@ -478,6 +478,7 @@ table form{
 
 /*  Bootstrap breakpoints */
 @media (min-width: 576px){
+	body{}
 
 }
 
@@ -491,10 +492,12 @@ table form{
 }
 
 @media (min-width: 992px){
+	body{}
 
 }
 
 @media (min-width: 1200px){
+	body{}
 
 }
 
