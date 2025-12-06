@@ -131,7 +131,9 @@ y-axis
 		cursor: pointer;
 	}
 
-	.mCSB_scrollTools .mCSB_buttonDown{ bottom: 0; }
+	.mCSB_scrollTools .mCSB_buttonDown{ bottom: 0; 
+	background-position: 0 -20px;
+}
 
 
 
@@ -931,7 +933,6 @@ yx-axis
 	width: auto;
 	}
 	
-	.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,  
 	.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, 
 	.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
 	.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #555; }
