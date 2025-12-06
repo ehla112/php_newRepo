@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 ">
 	<title>SisWebPhP</title>
 	<link rel="shortcut icon" href="assets/dashboard/assets/img/logo-sena-verde-png-sin-fondo.png">
 
@@ -48,7 +48,7 @@
 						<?php echo $profile->getUserName() . " " . $profile->getUserLastName() ?> <br><small class="roboto-condensed-light">Código Usuario: <?php echo $profile->getUserCode() ?></small>
 					</figcaption>
 				</figure>
-				<nav class="full-box nav-lateral-menu">
+				<nav class="full-box nav-lateral-menu" aria-label="Menu lateral">
 					<ul>
 						<li>
 							<a href="#"><i class="fas fa-user fa-fw"></i> &nbsp; Editar Perfil</a>
@@ -56,7 +56,7 @@
 					</ul>
 				</nav>
 				<div class="full-box nav-lateral-bar"></div>
-				<nav class="full-box nav-lateral-menu">
+				<nav class="full-box nav-lateral-menu" aria-label="Menu lateral">
 					<ul>
 						<li>
 							<a href="?c=Dashboard" class=""><i class="fab fa-dashcube fa-fw"></i> &nbsp; <?php echo ucfirst($session) ?></a>
@@ -87,7 +87,7 @@
 
 		<!-- Page content -->
 		<section class="full-box page-content">
-			<nav class="full-box navbar-info">
+			<nav class="full-box navbar-info" aria-label="Barra de informacion">
 				<a href="#" class="float-left show-nav-lateral">
 					<i class="fas fa-exchange-alt"></i>
 				</a>
