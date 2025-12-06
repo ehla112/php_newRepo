@@ -168,13 +168,13 @@ table form{
 }
 /*----------  Text Styles  ----------*/
 .roboto-medium{
-	font-family: 'roboto_medium_regular';
+	font-family: 'roboto_medium_regular',sans-serif;
 }
 .roboto-condensed-light{
-	font-family: 'roboto_condensed_light';
+	font-family: 'roboto_condensed_light',sans-serif;
 }
 .roboto-condensed-regular{
-	font-family: 'roboto_condensed_regular';
+	font-family: 'roboto_condensed_regular',sans-serif;
 }
 
 /*----------  login Styles  ----------*/
@@ -411,7 +411,7 @@ table form{
 	font-size: 80px;
 }
 .tile-icon > p{
-	font-family: 'roboto_medium_regular';
+	font-family: 'roboto_medium_regular',sans-serif;
 	height: 35px;
 	line-height: 35px;
 }
